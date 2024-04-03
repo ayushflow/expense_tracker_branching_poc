@@ -53,7 +53,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 ),
           ),
           actions: [],
-          centerTitle: false,
+          centerTitle: true,
           elevation: 2.0,
         ),
         body: SafeArea(
