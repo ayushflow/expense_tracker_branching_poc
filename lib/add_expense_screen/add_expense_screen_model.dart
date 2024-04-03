@@ -1,3 +1,5 @@
+import '/backend/schema/structs/index.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -10,6 +12,14 @@ class AddExpenseScreenModel extends FlutterFlowModel<AddExpenseScreenWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  // State field(s) for title widget.
+  FocusNode? titleFocusNode;
+  TextEditingController? titleController;
+  String? Function(BuildContext, String?)? titleControllerValidator;
+  // State field(s) for amount widget.
+  FocusNode? amountFocusNode;
+  TextEditingController? amountController;
+  String? Function(BuildContext, String?)? amountControllerValidator;
 
   /// Initialization and disposal methods.
 
@@ -19,6 +29,11 @@ class AddExpenseScreenModel extends FlutterFlowModel<AddExpenseScreenWidget> {
   @override
   void dispose() {
     unfocusNode.dispose();
+    titleFocusNode?.dispose();
+    titleController?.dispose();
+
+    amountFocusNode?.dispose();
+    amountController?.dispose();
   }
 
   /// Action blocks are added here.
